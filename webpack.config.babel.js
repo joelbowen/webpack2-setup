@@ -9,6 +9,11 @@ module.exports = env => {
             path: resolve('dist'),
             publicPath: '/dist/',
         },
+        module: {
+            loaders: [
+                { test: /\.(js?x)$/, loaders: ['babel-loader'], exclude: /node_modules/ },
+            ],
+        },
     }
 
     return config;
