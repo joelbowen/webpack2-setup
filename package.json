@@ -7,7 +7,15 @@
     "todomvc-app-css": "^2.0.0",
     "todomvc-common": "^1.0.1"
   },
+  "devDependencies": {
+    "rimraf": "^2.6.0",
+    "webpack": "^2.2.1",
+    "webpack-dev-server": "^2.4.1"
+  },
   "scripts": {
-    "serve": "python -m SimpleHTTPServer"
+    "serve": "python -m SimpleHTTPServer",
+    "prebuild:dev": "rimraf dist",
+    "build:dev": "webpack --env.dev",
+    "dev": "webpack-dev-server --env.dev"
   }
 }
