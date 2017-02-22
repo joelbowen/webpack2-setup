@@ -1,6 +1,8 @@
 // Setup Application Resources
 require('todomvc-common/base');
 require('react/dist/JSXTransformer');
+require('todomvc-common/base.css');
+require('todomvc-app-css/index.css');
 
 window.React      = require('react/dist/react-with-addons');
 window.Router     = require('director/build/director').Router;
