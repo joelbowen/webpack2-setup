@@ -1,5 +1,6 @@
 const { resolve } = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = env => {
     const config = {
@@ -8,7 +9,6 @@ module.exports = env => {
         output: {
             filename: 'bundle.js',
             path: resolve('dist'),
-            publicPath: '/dist/',
         },
         module: {
             loaders: [
@@ -24,6 +24,9 @@ module.exports = env => {
         },
         plugins: [
             new ExtractTextPlugin('styles.css'),
+            new HtmlWebpackPlugin({
+                template: './index.html',
+            }),
         ],
     }
 
