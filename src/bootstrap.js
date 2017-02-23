@@ -1,4 +1,6 @@
 // Setup Application Resources
+import { install as offlineInstall } from 'offline-plugin/runtime'
+
 require('todomvc-common/base');
 require('react/dist/JSXTransformer');
 require('todomvc-common/base.css');
@@ -20,3 +22,6 @@ require('./todoModel');
 require('./todoItem.jsx');
 require('./footer.jsx');
 require('./app.jsx');
+
+// Go offline!
+offlineInstall();

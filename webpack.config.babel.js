@@ -1,6 +1,7 @@
 const { resolve } = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const OfflinePlugin = require('offline-plugin');
 
 module.exports = env => {
     const config = {
@@ -27,6 +28,7 @@ module.exports = env => {
             new HtmlWebpackPlugin({
                 template: './index.html',
             }),
+            new OfflinePlugin(),
         ],
     }
 
